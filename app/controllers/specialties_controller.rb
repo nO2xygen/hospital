@@ -1,4 +1,4 @@
-class SpecialtiesController < ApiController
+class SpecialtiesController < ApplicationController
   before_action :set_specialty, only: %i[ show update destroy ]
 
   # GET /specialties
