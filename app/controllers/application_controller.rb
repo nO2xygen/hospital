@@ -1,4 +1,2 @@
-class ApplicationController < ActionController::API
-    include ActionController::Helpers
-    include ActionView::Layouts
+class ApplicationController < ActionController::Base
 end

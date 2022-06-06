@@ -1,4 +1,4 @@
-class AppointmentsController < ApplicationController
+class AppointmentsController < ApiController
   before_action :authenticate_user!
   before_action :set_appointment, only: %i[ show update destroy ]
 

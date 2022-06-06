@@ -1,4 +1,4 @@
-class DoctorsController < ApplicationController
+class DoctorsController < ApiController
   before_action :authenticate_user!, except: %i[ index show ]
   before_action :set_doctor, only: %i[ show update destroy ]
 
