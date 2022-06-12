@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_06_212322) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_12_005233) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -40,7 +40,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_06_212322) do
   create_table "appointments", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.boolean "completed"
+    t.boolean "completed", default: false
+    t.text "diagnosis", default: "There is no diagnosis yet. Wait please for your doctor's appointment."
     t.integer "patient_id", null: false
     t.integer "doctor_id", null: false
     t.datetime "created_at", null: false

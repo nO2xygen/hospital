@@ -6,6 +6,7 @@
                 <span>Description: {{app.description}}</span>
                 <span>Doctor: {{app.doctor.name}}</span>
                 <span>Status: {{app.completed ? 'completed' : 'in progress'}}</span>
+                <span>Diagnosis: {{app.diagnosis}}</span>
             </li>
         </ul>
     </div>

@@ -13,10 +13,6 @@ class AppointmentsController < ApiController
     render json: @appointment
   end
 
-  def new
-
-  end
-
   # POST /appointments
   def create
     @patient = current_user.role
@@ -25,7 +21,7 @@ class AppointmentsController < ApiController
     # @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      render json: @appointment, status: :created, location: @appointment
+      render json: @appointment, status: :created
     else
       render json: @appointment.errors
     end
@@ -53,6 +49,6 @@ class AppointmentsController < ApiController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:name, :description, :completed, :doctor_id)
+      params.require(:appointment).permit(:name, :description, :completed, :diagnosis, :doctor_id)
     end
 end

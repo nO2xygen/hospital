@@ -64,7 +64,6 @@ export default {
                     appointment: {
                         name: this.newAppointment.name,
                         description: this.newAppointment.description,
-                        completed: false,
                         doctor_id: this.doctor.id
                     }
                 })
